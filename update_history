@@ -1,0 +1,17 @@
+./dpxdt/server/static
+    新建CK、speedo、tommy目录
+./dpxdt/server/config.py
+    修改数据库文件路径
+./frontend.py
+    新增/savefile接口，添加base64转png（base64_png）函数
+./dpxdt/tools/diff_my_images.py
+    新增json_write函数，使运行diff_my_images.py测试时，仅需指定测试图片保存路径即可自动编写测试脚本（***.json）于测试图
+片保存目录下，并自动加载测试
+./dpxdt/tools/flags.py
+    在修改diff_my_images.py加载测试脚本方式后，根据修改结果修改flags.py中脚本路径字段名为图片保存路径字段名，以正常运行
+./dpxdt/tools/run_server.py
+    添加import加载识别路径
+run_diff_my_images.sh
+    增加windows启动命令示例
+start_up.bat
+    windows下服务启动命令

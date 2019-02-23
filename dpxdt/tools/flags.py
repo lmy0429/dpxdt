@@ -48,7 +48,7 @@ gflags.DEFINE_string(
     'the commit or branch that was built.')
 
 gflags.DEFINE_string(
-    'tests_json_path', None,
+    'casefile_path', None,
     'Path to the JSON file containing the list of tests to diff.')
 
 gflags.DEFINE_integer(

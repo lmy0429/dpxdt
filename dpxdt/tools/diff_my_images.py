@@ -53,12 +53,14 @@ import datetime
 import json
 import logging
 import sys
+import os
 
 # Local Libraries
 import gflags
 FLAGS = gflags.FLAGS
 
 # Local modules
+sys.path.append(".")
 from dpxdt.client import fetch_worker
 from dpxdt.client import release_worker
 from dpxdt.client import workers
@@ -150,7 +152,7 @@ class DiffMyImages(workers.WorkflowItem):
             upload_release_name,
             heartbeat=None):
         if not upload_release_name:
-            upload_release_name = str(datetime.datetime.utcnow())
+            upload_release_name = str(datetime.datetime.now())
 
         yield heartbeat('Creating release %s' % upload_release_name)
         release_number = yield release_worker.CreateReleaseWorkflow(
@@ -172,8 +174,23 @@ class DiffMyImages(workers.WorkflowItem):
         yield heartbeat('Results viewable at: %s' % release_url)
 
 
+def json_write(casefile_path):
+    filelist = os.listdir(casefile_path)
+    li = []
+    for i in filelist:
+        if i.endswith("png"):
+            with open(casefile_path+"/tests_case.json", "w") as f:
+                dic = {}
+                dic["name"] = i[:-4]
+                dic["run_failed"] = False
+                dic["image_path"] = "{0}{1}{2}".format(casefile_path, '/', i)
+                dic["log_path"] = "{0}{1}{2}".format(casefile_path, '/', "testlog.txt")
+                li.append(dic)
+                f.write(json.dumps(li, ensure_ascii=False))
+
+
 def real_main(release_url=None,
-              tests_json_path=None,
+              casefile_path=None,
               upload_build_id=None,
               upload_release_name=None):
     """Runs diff_my_images."""
@@ -181,7 +198,9 @@ def real_main(release_url=None,
     fetch_worker.register(coordinator)
     coordinator.start()
 
-    data = open(FLAGS.tests_json_path).read()
+    json_write(FLAGS.casefile_path)
+    tests_json_path = FLAGS.casefile_path + "/tests_case.json"
+    data = open(tests_json_path).read()
     tests = load_tests(data)
 
     item = DiffMyImages(
@@ -207,7 +226,7 @@ def main(argv):
 
     assert FLAGS.release_cut_url
     assert FLAGS.release_server_prefix
-    assert FLAGS.tests_json_path
+    assert FLAGS.casefile_path
     assert FLAGS.upload_build_id
 
     if FLAGS.verbose:
@@ -215,7 +234,7 @@ def main(argv):
 
     real_main(
         release_url=FLAGS.release_cut_url,
-        tests_json_path=FLAGS.tests_json_path,
+        casefile_path=FLAGS.casefile_path,
         upload_build_id=FLAGS.upload_build_id,
         upload_release_name=FLAGS.upload_release_name)
 

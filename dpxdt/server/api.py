@@ -182,7 +182,6 @@ def _check_release_done_processing(release):
                  'name=%r, number=%d', release.build_id, release.name,
                  release.number)
 
-
     build_id = release.build_id
     release_name = release.name
     release_number = release.number

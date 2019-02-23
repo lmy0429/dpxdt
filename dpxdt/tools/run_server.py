@@ -30,6 +30,7 @@ import gflags
 FLAGS = gflags.FLAGS
 
 # Local modules
+sys.path.append(".")
 from dpxdt.client import capture_worker
 from dpxdt.client import fetch_worker
 from dpxdt.client import pdiff_worker

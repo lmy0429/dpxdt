@@ -3,7 +3,7 @@
 setup: |
     cd dpxdt/tools/local_pdiff_demo
     sleep 2
-    python -m SimpleHTTPServer
+    python2 -m SimpleHTTPServer
 
 # This runs after the setup script and before any tests are run.
 # It's a great place to wait for server startup.

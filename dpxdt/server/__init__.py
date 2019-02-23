@@ -30,12 +30,10 @@ import jinja2
 # Local modules required for app setup
 import config
 
-
 app = Flask(__name__)
 app.config.from_object(config)
 if 'YOURAPPLICATION_SETTINGS' in os.environ:
     app.config.from_envvar('YOURAPPLICATION_SETTINGS')
-
 
 db = SQLAlchemy(
     app,
@@ -43,17 +41,13 @@ db = SQLAlchemy(
     # quickly read properties from their last known-good state.
     session_options=dict(expire_on_commit=False))
 
-
 login = LoginManager(app)
 login.login_view = 'login_view'
 login.refresh_view = 'login_view'
 
-
 cache = Cache(app)
 
-
 mail = Mail(app)
-
 
 # Modules with handlers to register with the app
 from dpxdt.server import api

@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 # Copyright 2013 Brett Slatkin
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,14 +13,13 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 """Frontend for the API server."""
 
 import base64
 import datetime
 import hashlib
 import logging
-
+import os
 # Local libraries
 import flask
 from flask import Flask, abort, g, redirect, render_template, request, url_for
@@ -90,6 +90,24 @@ def new_build():
         build_form=form)
 
 
+@app.route('/savefile', methods=['PUT'])
+def save():
+    if request.method == 'PUT':
+        site = request.form['site']
+        filename = request.form['filename']
+        base64_data = request.form['base64_data']
+        base64_png(site, filename, base64_data)
+        return "更新图片成功"
+
+
+def base64_png(site,filename, base64_data):
+    data = base64.b64decode(base64_data)
+    basepath = os.path.dirname(__file__)
+    upload_path = os.path.join(basepath, 'static\{}'.format(site))
+    with open(upload_path + os.path.sep + filename + ".png", "wb") as a:
+        a.write(data)
+
+
 @app.route('/build')
 @auth.build_access_required
 def view_build():
@@ -144,7 +162,7 @@ def view_build():
         has_next_page=has_next_page,
         current_offset=offset,
         next_offset=offset + page_size,
-        last_offset=max(0, offset -  page_size))
+        last_offset=max(0, offset - page_size))
 
 
 @app.route('/release', methods=['GET', 'POST'])
