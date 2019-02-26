@@ -100,9 +100,6 @@ def save():
         dirlist = os.listdir(os.path.join(basepath, 'static'))
         if site not in dirlist:
             os.mkdir(basepath + '\static\{}'.format(site))
-        if filename is None:
-            print datetime.datetime.now()
-            filename = str(datetime.datetime.now())
         base64_png(site, filename, base64_data)
         return "更新图片成功"
 

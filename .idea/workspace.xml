@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49501c36-a885-466a-8f00-b5ba4fcd11a6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dpxdt/server/static/CK/testlog.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_diff_my_image.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dpxdt/client/process_worker.py" beforeDir="false" afterPath="$PROJECT_DIR$/dpxdt/client/process_worker.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dpxdt/server/frontend.py" beforeDir="false" afterPath="$PROJECT_DIR$/dpxdt/server/frontend.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dpxdt/server/static/CK/PLP.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dpxdt/tools/url_pair_diff.py" beforeDir="false" afterPath="$PROJECT_DIR$/dpxdt/tools/url_pair_diff.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_diff_my_images.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run_diff_my_images.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testdata/JellyBean1920.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testdata/JellyBean1920.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testdata/JellyBean1920altered.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testdata/JellyBellyBeans.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testdata/JellyBellyBeans.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testdata/JellyBellyBeansaltered.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testdata/tests_case.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testdata/tests_case.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -154,11 +141,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dpxdt/server/frontend.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="106" column="19" lean-forward="true" selection-start-line="106" selection-start-column="19" selection-end-line="106" selection-end-column="19" />
+            <state relative-caret-position="440">
+              <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
             </state>
           </provider>
         </entry>
@@ -175,7 +162,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dpxdt/tools/url_pair_diff.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="575">
@@ -187,8 +174,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dpxdt/client/process_worker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1025">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="551">
+              <caret line="67" column="19" lean-forward="true" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
               <folding>
                 <element signature="e#680#692#0" expanded="true" />
               </folding>
@@ -603,7 +590,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -617,7 +604,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50054705" side_tool="true" weight="0.38121548" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49945295" visible="true" weight="0.18675353" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49945295" visible="true" weight="0.18675353" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32899022" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -632,22 +619,6 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/dpxdt/client/process_worker.py</url>
-          <line>67</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/dpxdt/client/process_worker.py</url>
-          <line>61</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/dpxdt/server/static/img/GitHub-Mark-32px.png">
@@ -854,16 +825,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/client/process_worker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1025">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="e#680#692#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/update_history">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -878,10 +839,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/frontend.py">
+    <entry file="file://$PROJECT_DIR$/dpxdt/client/process_worker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="106" column="19" lean-forward="true" selection-start-line="106" selection-start-column="19" selection-end-line="106" selection-end-column="19" />
+        <state relative-caret-position="551">
+          <caret line="67" column="19" lean-forward="true" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
+          <folding>
+            <element signature="e#680#692#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -889,6 +853,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
           <caret line="53" column="43" lean-forward="true" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/frontend.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
         </state>
       </provider>
     </entry>
