@@ -43,6 +43,7 @@ import gflags
 FLAGS = gflags.FLAGS
 
 # Local modules
+sys.path.append(".")
 from dpxdt.client import fetch_worker
 from dpxdt.client import release_worker
 from dpxdt.client import workers

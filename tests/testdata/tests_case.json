@@ -1,26 +1,14 @@
 [
   {
-    "log_path": "./tests/testdata/testlog.txt",
-    "image_path": "./tests/testdata/JellyBean1920.png",
+    "log_path": "./tests/testdata//testlog.txt",
+    "image_path": "./tests/testdata//JellyBean1920.png",
     "name": "JellyBean1920",
     "run_failed": false
   },
   {
-    "log_path": "./tests/testdata/testlog.txt",
-    "image_path": "./tests/testdata/JellyBean1920altered.png",
-    "name": "JellyBean1920altered",
-    "run_failed": false
-  },
-  {
-    "log_path": "./tests/testdata/testlog.txt",
-    "image_path": "./tests/testdata/JellyBellyBeans.png",
+    "log_path": "./tests/testdata//testlog.txt",
+    "image_path": "./tests/testdata//JellyBellyBeans.png",
     "name": "JellyBellyBeans",
-    "run_failed": false
-  },
-  {
-    "log_path": "./tests/testdata/testlog.txt",
-    "image_path": "./tests/testdata/JellyBellyBeansaltered.png",
-    "name": "JellyBellyBeansaltered",
     "run_failed": false
   }
 ]

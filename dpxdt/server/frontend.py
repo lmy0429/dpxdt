@@ -96,11 +96,18 @@ def save():
         site = request.form['site']
         filename = request.form['filename']
         base64_data = request.form['base64_data']
+        basepath = os.path.dirname(__file__)
+        dirlist = os.listdir(os.path.join(basepath, 'static'))
+        if site not in dirlist:
+            os.mkdir(basepath + '\static\{}'.format(site))
+        if filename is None:
+            print datetime.datetime.now()
+            filename = str(datetime.datetime.now())
         base64_png(site, filename, base64_data)
         return "更新图片成功"
 
 
-def base64_png(site,filename, base64_data):
+def base64_png(site, filename, base64_data):
     data = base64.b64decode(base64_data)
     basepath = os.path.dirname(__file__)
     upload_path = os.path.join(basepath, 'static\{}'.format(site))

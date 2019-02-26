@@ -64,7 +64,7 @@ class ProcessWorkflow(workers.WorkflowItem):
                     args,
                     stderr=subprocess.STDOUT,
                     stdout=output_file,
-                    close_fds=True)
+                    close_fds=False)
             except:
                 LOGGER.error('item=%r Failed to run subprocess: %r',
                              self, args)
