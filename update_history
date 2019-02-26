@@ -15,3 +15,7 @@ run_diff_my_images.sh
     增加windows启动命令示例
 start_up.bat
     windows下服务启动命令
+./dpxdt/client/process_worker.py
+    修改run方法中close_fds参数值为False，否则windows环境下会报错不支持
+./dpxdt/server/operations.py
+    修改_get_versioned_hash_key函数中“%d”为“%s”避免报类型错误
