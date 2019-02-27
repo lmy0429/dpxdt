@@ -101,7 +101,7 @@ def save():
         if site not in dirlist:
             os.mkdir(basepath + '\static\{}'.format(site))
         base64_png(site, filename, base64_data)
-        return jsonify({"msg": "更新图片成功"})
+        return jsonify({"msg": "Update Success"})
 
 
 def base64_png(site, filename, base64_data):
