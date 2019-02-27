@@ -22,7 +22,7 @@ import logging
 import os
 # Local libraries
 import flask
-from flask import Flask, abort, g, redirect, render_template, request, url_for
+from flask import Flask, abort, g, redirect, render_template, request, url_for, jsonify
 from flask.ext.login import (
     current_user, fresh_login_required, login_fresh, login_required)
 from flask.ext.wtf import Form
@@ -101,7 +101,7 @@ def save():
         if site not in dirlist:
             os.mkdir(basepath + '\static\{}'.format(site))
         base64_png(site, filename, base64_data)
-        return "更新图片成功"
+        return jsonify({"code": 200, "msg": "更新图片成功"})
 
 
 def base64_png(site, filename, base64_data):
