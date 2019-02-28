@@ -16,6 +16,7 @@
 """Frontend for the API server."""
 
 import base64
+import multiprocessing
 import datetime
 import hashlib
 import logging
@@ -110,6 +111,31 @@ def base64_png(site, filename, base64_data):
     upload_path = os.path.join(basepath, 'static\{}'.format(site))
     with open(upload_path + os.path.sep + filename + ".png", "wb") as a:
         a.write(data)
+
+
+@app.route('/run', methods=['POST'])
+def run():
+    if request.method == 'POST':
+        site = request.form['site']
+        id = {"speedo": 1, "CK": 2, "tommy": 3}
+        release_server_prefix = 'http://localhost:5000/api'
+        casefile_path = os.path.abspath(os.path.dirname(__file__) + os.path.sep + ".") + "\\static" + "\\%s\\" % site
+        build_id = id[site]
+        cut_url = 'http://example.com/path/to/my/release/tool/for/this/cut'
+        run_diff_path = os.path.abspath(os.getcwd()) + "\\dpxdt\\tools\\diff_my_images.py"
+        data = "python %s --upload_build_id=%s --release_server_prefix=%s --release_cut_url=%s --casefile_path=%s" % (
+            run_diff_path, build_id, release_server_prefix, cut_url, casefile_path)
+        with open(os.path.dirname(os.path.dirname(__file__)) + "_run.bat", 'w') as f:
+            f.write(data)
+        process = multiprocessing.Process(target=run_bat)
+        process.start()
+        return "Execute successfully"
+    else:
+        return "method error"
+
+
+def run_bat():
+    os.system(os.path.dirname(os.path.dirname(__file__)) + "_run.bat")
 
 
 @app.route('/build')
