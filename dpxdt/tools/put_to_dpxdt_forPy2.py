@@ -13,7 +13,7 @@ sys.setdefaultencoding('utf-8')
 
 
 def put_to_dpxdt(site, filename, base64_data):
-    url = "http://101.207.235.205:5000/savefile"
+    url = "http://10.110.30.10:5000/savefile"
     data = {
         "site": "{}".format(site),
         "filename": "{}".format(filename),
