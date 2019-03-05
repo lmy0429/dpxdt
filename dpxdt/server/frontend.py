@@ -113,8 +113,8 @@ def base64_png(site, filename, base64_data):
         a.write(data)
 
 
-@app.route('/run', methods=['POST'])
-def run():
+@app.route('/runtest', methods=['POST'])
+def run_test():
     if request.method == 'POST':
         site = request.form['site']
         id = {"speedo": 1, "CK": 2, "tommy": 3}
