@@ -183,8 +183,8 @@ def json_write(casefile_path):
                 dic = {}
                 dic["name"] = i[:-4]
                 dic["run_failed"] = False
-                dic["image_path"] = "{0}{1}{2}".format(casefile_path, '/', i)
-                dic["log_path"] = "{0}{1}{2}".format(casefile_path, '/', "testlog.txt")
+                dic["image_path"] = "{0}{1}".format(casefile_path, i)
+                dic["log_path"] = "{0}{1}".format(casefile_path,  "testlog.txt")
                 li.append(dic)
                 f.write(json.dumps(li, ensure_ascii=False))
 
