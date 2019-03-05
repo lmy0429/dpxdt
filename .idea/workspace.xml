@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49501c36-a885-466a-8f00-b5ba4fcd11a6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_diff_my_image.bat" beforeDir="false" afterPath="$PROJECT_DIR$/run_diff_my_image.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/start_up.bat" beforeDir="false" afterPath="$PROJECT_DIR$/start_up.bat" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -135,7 +133,7 @@
     <session id="706130212">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.12" value="2" />
@@ -160,7 +158,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Bash" value="16" />
-          <entry key="Bat" value="18" />
+          <entry key="Bat" value="19" />
           <entry key="CSS" value="1" />
           <entry key="Database Element" value="11" />
           <entry key="Dockerfile" value="3" />
@@ -170,7 +168,7 @@
           <entry key="JSON" value="9" />
           <entry key="JavaScript" value="1" />
           <entry key="PLAIN_TEXT" value="12" />
-          <entry key="Python" value="127" />
+          <entry key="Python" value="128" />
           <entry key="YAML" value="3" />
         </counts>
       </usages-collector>
@@ -218,11 +216,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dpxdt/server/models.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/start_up.bat">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2700">
-              <caret line="112" selection-start-line="112" selection-end-line="112" />
+            <state>
+              <caret column="6" selection-start-column="6" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -231,7 +229,7 @@
         <entry file="file://$PROJECT_DIR$/run_diff_my_image.bat">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="30" selection-start-column="30" selection-end-column="30" />
+              <caret column="29" selection-start-column="29" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -263,11 +261,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dpxdt/tools/put_to_dpxdt_forPy2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="877">
-              <caret line="41" column="28" lean-forward="true" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+            <state relative-caret-position="150">
+              <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
               <folding>
                 <element signature="e#38#51#0" expanded="true" />
               </folding>
@@ -418,9 +416,10 @@
         <option value="$PROJECT_DIR$/speedo_visualtest_run.py" />
         <option value="$PROJECT_DIR$/visualtest_run.py" />
         <option value="$USER_HOME$/Desktop/visualtest_run.py" />
-        <option value="$PROJECT_DIR$/start_up.bat" />
-        <option value="$PROJECT_DIR$/run_diff_my_image.bat" />
         <option value="$PROJECT_DIR$/dpxdt/server/static/CK/tests_case.json" />
+        <option value="$PROJECT_DIR$/dpxdt/tools/put_to_dpxdt_forPy2.py" />
+        <option value="$PROJECT_DIR$/run_diff_my_image.bat" />
+        <option value="$PROJECT_DIR$/start_up.bat" />
       </list>
     </option>
   </component>
@@ -452,47 +451,6 @@
               <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
               <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="dpxdt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
-              <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dpxdt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
-              <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dpxdt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
-              <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dpxdt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
-              <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="CK" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dpxdt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
-              <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dpxdt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
-              <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -513,11 +471,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\casaba\autotest\dpxdt\mikuu_dpxdt\dpxdt" />
       <recent name="D:\casaba\autotest\dpxdt\mikuu_dpxdt\dpxdt\dpxdt\server\static\CK" />
       <recent name="D:\casaba\autotest\dpxdt\mikuu_dpxdt\dpxdt\dpxdt\server\static\tommy" />
       <recent name="D:\casaba\autotest\dpxdt\mikuu_dpxdt\dpxdt\dpxdt\server\static\speedo" />
       <recent name="D:\casaba\autotest\dpxdt\mikuu_dpxdt\dpxdt\tests" />
-      <recent name="F:\job\UI\dpxdt\dpxdt\server\static\CK" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\casaba\autotest\dpxdt\mikuu_dpxdt\dpxdt\dpxdt\tools" />
@@ -728,9 +686,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18550107" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18550107" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -744,7 +701,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010661" side_tool="true" weight="0.18675353" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4989339" visible="true" weight="0.3724213" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4989339" visible="true" weight="0.3724213" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32899022" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -765,7 +722,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="add put_to_dpxdt.py" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/image/stranger_orderlist (1).png" />
     <entry file="file://$PROJECT_DIR$/dpxdt/server/static/image/stranger_orderlist.png" />
     <entry file="file://$PROJECT_DIR$/dpxdt/server/static/image/my_orderlist.png" />
     <entry file="file://$PROJECT_DIR$/dpxdt/server/templates/fragment_run_status.html">
@@ -946,13 +902,6 @@
     <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/testlog.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/start_up.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" selection-end-column="337" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/run_url_pair_diff.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -1031,10 +980,27 @@
     <entry file="file://$PROJECT_DIR$/dpxdt/server/static/CK/Fastskin1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/put_to_dpxdt_forPy2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/run_diff_my_image.bat">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="30" selection-start-column="30" selection-end-column="30" />
+          <caret column="29" selection-start-column="29" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/tools/put_to_dpxdt_forPy2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+          <folding>
+            <element signature="e#38#51#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1045,13 +1011,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/tools/put_to_dpxdt_forPy2.py">
+    <entry file="file://$PROJECT_DIR$/start_up.bat">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="877">
-          <caret line="41" column="28" lean-forward="true" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
-          <folding>
-            <element signature="e#38#51#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>

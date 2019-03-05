@@ -31,7 +31,7 @@ Example input file "my_url_tests.json". One entry per test:
 [
     {
         "name": "My homepage",
-        "run_url": "http://localhost:5000/static/dummy/dummy_page1.html",
+        "run_url": "http://localhost:80/static/dummy/dummy_page1.html",
         "run_config": {
             "viewportSize": {
                 "width": 1024,
@@ -40,7 +40,7 @@ Example input file "my_url_tests.json". One entry per test:
             "injectCss": "#foobar { background-color: lime",
             "injectJs": "document.getElementById('foobar').innerText = 'bar';",
         },
-        "ref_url": "http://localhost:5000/static/dummy/dummy_page1.html",
+        "ref_url": "http://localhost:80/static/dummy/dummy_page1.html",
         "ref_config": {
             "viewportSize": {
                 "width": 1024,

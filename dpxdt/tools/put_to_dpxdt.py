@@ -10,7 +10,7 @@ import argparse
 '''
 
 def put_to_dpxdt(site, filename, base64_data):
-    url = "http://127.0.0.1:5000/savefile"
+    url = "http://127.0.0.1:80/savefile"
     data = {
         "site": "{}".format(site),
         "filename": "{}".format(filename),

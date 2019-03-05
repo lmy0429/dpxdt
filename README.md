@@ -228,7 +228,7 @@ Topics in this section:
         server.db.create_all()
 
 1. Run the combined server/worker with ```./run_combined.sh```.
-1. Navigate to [http://localhost:5000](http://localhost:5000).
+1. Navigate to [http://localhost:80](http://localhost:80).
 1. Login and create a new build.
 1. Execute the ```./run_url_pair_diff.sh``` tool to verify everything is working:
 
@@ -358,7 +358,7 @@ To try this out on your local server, first establish a baseline:
     --upload_release_name="Awesome"
 ```
 
-Go to [the release page](http://localhost:5000/release?number=1&id=1&name=Awesome) and mark the release as good. Then upload a new set of images that represents an update:
+Go to [the release page](http://localhost:80/release?number=1&id=1&name=Awesome) and mark the release as good. Then upload a new set of images that represents an update:
 
 ```
 ./run_diff_my_images.sh \
@@ -368,7 +368,7 @@ Go to [the release page](http://localhost:5000/release?number=1&id=1&name=Awesom
     --upload_release_name="Awesome"
 ```
 
-Go to [the release page](http://localhost:5000/release?number=2&id=1&name=Awesome) and wait for the diffs to generate. Note how the first set of images you uploaded are used as the baseline automatically.
+Go to [the release page](http://localhost:80/release?number=2&id=1&name=Awesome) and wait for the diffs to generate. Note how the first set of images you uploaded are used as the baseline automatically.
 
 This example app works by reading a config file like this:
 
@@ -413,7 +413,7 @@ This example app works by reading a config file like this:
 [
     {
         "name": "My homepage",
-        "run_url": "http://localhost:5000/static/dummy/dummy_page1.html",
+        "run_url": "http://localhost:80/static/dummy/dummy_page1.html",
         "run_config": {
             "viewportSize": {
                 "width": 1024,
@@ -422,7 +422,7 @@ This example app works by reading a config file like this:
             "injectCss": "#foobar { background-color: lime",
             "injectJs": "document.getElementById('foobar').innerText = 'bar';",
         },
-        "ref_url": "http://localhost:5000/static/dummy/dummy_page1.html",
+        "ref_url": "http://localhost:80/static/dummy/dummy_page1.html",
         "ref_config": {
             "viewportSize": {
                 "width": 1024,
@@ -451,7 +451,7 @@ curl -v \
     -F 'release_number=1' \
     -F 'log=906d3259c103f6fcba4e8164a4dc3ae0d1a685d9' \
     -F 'release_name=2013-06-16 17:35:03.327710' \
-    'http://localhost:5000/api/report_run'
+    'http://localhost:80/api/report_run'
 ```
 
 ### API Reference
@@ -667,15 +667,15 @@ Here's how to deploy to Google App Engine / CloudSQL / Google Compute Engine. Th
 
         docker images -q | xargs docker rmi
 
-1. Navigate to <http://localhost:5000/_ah/appstats/shell>, login as admin, and initialize the database with this script:
+1. Navigate to <http://localhost:80/_ah/appstats/shell>, login as admin, and initialize the database with this script:
 
         from dpxdt import server
         server.db.create_all()
 
-1. Navigate to the local server on <http://localhost:5000>, sign in, and then:
+1. Navigate to the local server on <http://localhost:80>, sign in, and then:
     1. Create a new build; this will be the master build
     1. Create an API key for the new build
-1. Make the API key into a super user by navigating to <http://localhost:5000/_ah/appstats/shell> and running this script:
+1. Make the API key into a super user by navigating to <http://localhost:80/_ah/appstats/shell> and running this script:
 
         from dpxdt.server import models
         from dpxdt.server import db
@@ -693,7 +693,7 @@ Here's how to deploy to Google App Engine / CloudSQL / Google Compute Engine. Th
 
         ./dpxdt/tools/url_pair_diff.py \
             --upload_build_id=<build number> \
-            --release_server_prefix=http://localhost:5000/api \
+            --release_server_prefix=http://localhost:80/api \
             --release_client_id=<your api key> \
             --release_client_secret=<your api secret> \
             http://google.com \

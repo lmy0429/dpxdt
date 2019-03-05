@@ -56,7 +56,7 @@ gflags.DEFINE_bool(
     'Ignore any need for authentication for API and frontend accesses. You '
     'should only do this for local development!')
 
-gflags.DEFINE_integer('port', 5000, 'Port to run the HTTP server on.')
+gflags.DEFINE_integer('port', 80, 'Port to run the HTTP server on.')
 
 gflags.DEFINE_string('host', '0.0.0.0', 'Host argument for the server.')
 

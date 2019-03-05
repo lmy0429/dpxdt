@@ -118,7 +118,7 @@ def run():
     if request.method == 'POST':
         site = request.form['site']
         id = {"speedo": 1, "CK": 2, "tommy": 3}
-        release_server_prefix = 'http://localhost:5000/api'
+        release_server_prefix = 'http://localhost:80/api'
         casefile_path = os.path.abspath(os.path.dirname(__file__) + os.path.sep + ".") + "\\static" + "\\%s\\" % site
         build_id = id[site]
         cut_url = 'http://example.com/path/to/my/release/tool/for/this/cut'

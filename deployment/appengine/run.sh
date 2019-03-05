@@ -3,6 +3,6 @@
 gcloud \
     --project=dpxdt-local \
     preview app run \
-    --host localhost:5000 \
+    --host localhost:80 \
     "$@" \
     combined_vm.yaml
