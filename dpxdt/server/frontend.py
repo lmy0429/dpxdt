@@ -21,6 +21,7 @@ import datetime
 import hashlib
 import logging
 import os
+import stat,shutil
 # Local libraries
 import flask
 from flask import Flask, abort, g, redirect, render_template, request, url_for, jsonify
@@ -38,6 +39,7 @@ from dpxdt.server import models
 from dpxdt.server import operations
 from dpxdt.server import signals
 from dpxdt.server import utils
+from dpxdt.server import api
 
 
 @app.context_processor
@@ -97,10 +99,12 @@ def save():
         site = request.form['site']
         filename = request.form['filename']
         base64_data = request.form['base64_data']
-        basepath = os.path.dirname(__file__)
+        basepath = os.path.abspath(os.path.dirname(__file__))
         dirlist = os.listdir(os.path.join(basepath, 'static'))
-        if site not in dirlist:
-            os.mkdir(basepath + '\static\{}'.format(site))
+        if site in dirlist:
+            os.chmod(basepath + '\static\{}'.format(site),stat.S_IWUSR)
+            shutil.rmtree(basepath + '\static\{}'.format(site))
+        os.mkdir(basepath + '\static\{}'.format(site))
         base64_png(site, filename, base64_data)
         return jsonify({"msg": "Update Success"})
 
