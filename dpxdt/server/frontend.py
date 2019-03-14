@@ -21,7 +21,7 @@ import datetime
 import hashlib
 import logging
 import os
-import stat,shutil
+import stat, shutil
 # Local libraries
 import flask
 from flask import Flask, abort, g, redirect, render_template, request, url_for, jsonify
@@ -95,26 +95,46 @@ def new_build():
 
 @app.route('/savefile', methods=['PUT'])
 def save():
-    if request.method == 'PUT':
-        site = request.form['site']
-        filename = request.form['filename']
-        base64_data = request.form['base64_data']
-        basepath = os.path.abspath(os.path.dirname(__file__))
-        dirlist = os.listdir(os.path.join(basepath, 'static'))
-        if site in dirlist:
-            os.chmod(basepath + '\static\{}'.format(site),stat.S_IWUSR)
-            shutil.rmtree(basepath + '\static\{}'.format(site))
-        os.mkdir(basepath + '\static\{}'.format(site))
-        base64_png(site, filename, base64_data)
-        return jsonify({"msg": "Update Success"})
+    site = request.form['site']
+    filename_str = request.form['filename_list']
+    filename_list = \
+        filename_str.replace('"', '').replace(']', '').replace('[', '').replace("'", '').replace(' ', '').split(",")
+    base64_data_str = request.form['base64_data_list']
+    base64_data_list = \
+        base64_data_str.replace('"', '').replace(']', '').replace('[', '').replace("'", '').replace(' ', '').split(",")
+    basepath = os.path.abspath(os.path.dirname(__file__))
+    dirlist = os.listdir(os.path.join(basepath, 'static'))
+    if site in dirlist:
+        os.chmod(basepath + '\static\{}'.format(site), stat.S_IWUSR)
+        shutil.rmtree(basepath + '\static\{}'.format(site))
+    os.mkdir(basepath + '\static\{}'.format(site))
+    count_success, count_mistack, failed_data = base64_png(site, filename_list, base64_data_list)
+    return jsonify({"msg": "{0} Update Success,{1} Update Failed".format(count_success, count_mistack),
+                    "failed_data": failed_data, "filename": filename_list})
 
 
-def base64_png(site, filename, base64_data):
-    data = base64.b64decode(base64_data)
-    basepath = os.path.dirname(__file__)
-    upload_path = os.path.join(basepath, 'static\{}'.format(site))
-    with open(upload_path + os.path.sep + filename + ".png", "wb") as a:
-        a.write(data)
+def base64_png(site, filename_list, base64_data_list):
+    count_mistack = 0
+    for index in range(len(filename_list)):
+        try:
+            data = base64.b64decode(base64_data_list[index][1:])
+            basepath = os.path.dirname(__file__)
+            upload_path = os.path.join(basepath, 'static\{}'.format(site))
+            with open(upload_path + os.path.sep + filename_list[index] + ".png", "wb") as a:
+                a.write(data)
+        except Exception as e:
+            count_mistack += 1
+            with open('PicToDpxdt_errolog.txt', 'a') as f:
+                f.write("{0} picture put error，error message({1})：{2}\n".format
+                        (filename_list[index], datetime.datetime.now(), e))
+    count_success = len(filename_list) - count_mistack
+    if count_mistack > 0:
+        with open('PicToDpxdt_errolog.txt', 'r') as f:
+            data = f.read()
+        os.remove("./PicToDpxdt_errolog.txt")
+    else:
+        data = None
+    return count_success, count_mistack, data
 
 
 @app.route('/runtest', methods=['POST'])
@@ -187,6 +207,9 @@ def view_build():
         for key in ops.get_stats_keys(status):
             stats_dict[key] += count
 
+    stats_dict = run_stats_dict[candidate.id]
+    runs_failed = stats_dict['runs_failed']
+    logging.info(runs_failed)
     return render_template(
         'view_build.html',
         build=build,
