@@ -62,7 +62,7 @@ class FetchItem(workers.WorkItem):
     def __init__(self,
                  url,
                  post=None,
-                 timeout_seconds=30,
+                 timeout_seconds=120,
                  result_path=None,
                  username=None,
                  password=None):

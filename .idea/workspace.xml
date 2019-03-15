@@ -3,11 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="49501c36-a885-466a-8f00-b5ba4fcd11a6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dpxdt/client/fetch_worker.py" beforeDir="false" afterPath="$PROJECT_DIR$/dpxdt/client/fetch_worker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dpxdt/server/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/dpxdt/server/auth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dpxdt/server/frontend.py" beforeDir="false" afterPath="$PROJECT_DIR$/dpxdt/server/frontend.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dpxdt/tools/put_to_dpxdt_forPy2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dpxdt/server/work_queue_handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/dpxdt/server/work_queue_handlers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dpxdt/tools/put_to_dpxdt.py" beforeDir="false" afterPath="$PROJECT_DIR$/dpxdt/tools/put_to_dpxdt.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run_diff_my_image.bat" beforeDir="false" afterPath="$PROJECT_DIR$/run_diff_my_image.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/start_up.bat" beforeDir="false" afterPath="$PROJECT_DIR$/start_up.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualtest_run.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,10 +21,12 @@
     <SUITE FILE_PATH="coverage/dpxdt$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1551063748600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop" />
     <SUITE FILE_PATH="coverage/dpxdt$run_server.coverage" NAME="run_server Coverage Results" MODIFIED="1551242714576" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dpxdt/tools" />
     <SUITE FILE_PATH="coverage/dpxdt$diff_my_images.coverage" NAME="diff_my_images Coverage Results" MODIFIED="1550567828294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dpxdt/tools" />
+    <SUITE FILE_PATH="coverage/dpxdt$frontend.coverage" NAME="frontend Coverage Results" MODIFIED="1552636350851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dpxdt/server" />
     <SUITE FILE_PATH="coverage/dpxdt$Nosetests_in_site_diff_test_py.coverage" NAME="Nosetests in site_diff_test.py Coverage Results" MODIFIED="1548986098856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/dpxdt$PutimageAndRun.coverage" NAME="PutimageAndRun Coverage Results" MODIFIED="1552548826747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dpxdt/tools" />
     <SUITE FILE_PATH="coverage/dpxdt$Nosetests_in_test_json_py.coverage" NAME="Nosetests in test_json.py Coverage Results" MODIFIED="1550556364455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/testdata" />
     <SUITE FILE_PATH="coverage/dpxdt$operations.coverage" NAME="operations Coverage Results" MODIFIED="1551331397324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dpxdt/server" />
+    <SUITE FILE_PATH="coverage/dpxdt$put_to_dpxdt__1_.coverage" NAME="put_to_dpxdt (1) Coverage Results" MODIFIED="1552636584745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dpxdt/tools" />
     <SUITE FILE_PATH="coverage/dpxdt$put_to_dpxdt.coverage" NAME="put_to_dpxdt Coverage Results" MODIFIED="1551259402513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/dpxdt$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1551324204824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dpxdt/tools" />
     <SUITE FILE_PATH="coverage/dpxdt$test.coverage" NAME="test Coverage Results" MODIFIED="1550898979091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dpxdt/server" />
@@ -53,34 +57,6 @@
         <item name="dpxdt" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="dpxdt" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
-        <item name="artifact: table" type="ffe0bd85:SqliteImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="dpxdt" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
-        <item name="build_ownership: table" type="ffe0bd85:SqliteImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="dpxdt" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
-        <item name="release: table" type="ffe0bd85:SqliteImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="dpxdt" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
-        <item name="run: table" type="ffe0bd85:SqliteImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -146,7 +122,7 @@
     <session id="706130212">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="18" />
+          <entry key="project.closed" value="19" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="5" />
           <entry key="project.open.time.12" value="2" />
@@ -156,33 +132,33 @@
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.open.time.9" value="5" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.open.time.9" value="6" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bash" value="35" />
-          <entry key="Bat" value="35" />
+          <entry key="Bat" value="37" />
           <entry key="Dockerfile" value="7" />
           <entry key="PLAIN_TEXT" value="500" />
-          <entry key="Python" value="5249" />
+          <entry key="Python" value="6935" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Bash" value="18" />
-          <entry key="Bat" value="25" />
+          <entry key="Bat" value="28" />
           <entry key="CSS" value="1" />
           <entry key="Database Element" value="21" />
           <entry key="Dockerfile" value="3" />
-          <entry key="HTML" value="7" />
+          <entry key="HTML" value="8" />
           <entry key="Image" value="93" />
           <entry key="Ini" value="3" />
           <entry key="JSON" value="12" />
           <entry key="JavaScript" value="2" />
-          <entry key="PLAIN_TEXT" value="14" />
-          <entry key="Python" value="160" />
+          <entry key="PLAIN_TEXT" value="15" />
+          <entry key="Python" value="180" />
           <entry key="PythonStub" value="1" />
           <entry key="YAML" value="3" />
         </counts>
@@ -231,11 +207,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dpxdt/server/frontend.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="149" column="54" selection-start-line="149" selection-start-column="54" selection-end-line="149" selection-end-column="54" />
+            <state relative-caret-position="350">
+              <caret line="189" column="27" lean-forward="true" selection-start-line="189" selection-start-column="27" selection-end-line="189" selection-end-column="27" />
               <folding>
                 <element signature="e#659#672#0" expanded="true" />
               </folding>
@@ -244,10 +220,49 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/start_up.bat">
+        <entry file="file://D:/Python2.7/Lib/site-packages/werkzeug/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="225" selection-start-column="225" selection-end-column="225" />
+            <state relative-caret-position="128">
+              <caret line="337" column="4" selection-start-line="337" selection-start-column="4" selection-end-line="337" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://D:/Python2.7/Lib/site-packages/werkzeug/routing.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1720">
+              <caret line="1646" column="56" selection-start-line="1646" selection-start-column="56" selection-end-line="1646" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://D:/Python2.7/Lib/site-packages/flask/helpers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="250" column="39" selection-start-line="250" selection-start-column="39" selection-end-line="250" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://D:/Python2.7/Lib/site-packages/flask/app.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="445">
+              <caret line="1641" column="16" selection-start-line="1641" selection-start-column="16" selection-end-line="1641" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dpxdt/server/work_queue_handlers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="122" column="38" lean-forward="true" selection-start-line="122" selection-start-column="38" selection-end-line="122" selection-end-column="38" />
+              <folding>
+                <element signature="e#632#646#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -255,26 +270,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dpxdt/server/work_queue.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="173" column="63" selection-start-line="173" selection-start-column="56" selection-end-line="173" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dpxdt/tools/PutimageAndRun.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="57" column="8" lean-forward="true" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
+            <state relative-caret-position="406">
+              <caret line="217" lean-forward="true" selection-start-line="217" selection-end-line="217" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dpxdt/tools/put_to_dpxdt.py">
+        <entry file="file://$PROJECT_DIR$/dpxdt/client/fetch_worker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="55" column="63" selection-start-line="55" selection-start-column="63" selection-end-line="55" selection-end-column="63" />
+            <state relative-caret-position="198">
+              <caret line="65" column="34" lean-forward="true" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dpxdt/tools/PutimageAndRun.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="359">
+              <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -291,12 +306,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>%s</find>
-      <find>select</find>
-      <find>get_builds</find>
-      <find>get_id</find>
-      <find>filter_by</find>
-      <find>operations.U</find>
       <find>5000</find>
       <find>run</find>
       <find>span2 offset2</find>
@@ -321,6 +330,12 @@
       <find>timeout</find>
       <find>capture</find>
       <find>30</find>
+      <find>failed</find>
+      <find>report_run</find>
+      <find>datetime</find>
+      <find>testresult</find>
+      <find>url_for</find>
+      <find>url</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -361,16 +376,13 @@
         <option value="$PROJECT_DIR$/dpxdt/server/test.py" />
         <option value="$PROJECT_DIR$/dpxdt/server/__init__.py" />
         <option value="$PROJECT_DIR$/Dockerfile" />
-        <option value="D:/Python2.7/Lib/site-packages/flask/app.py" />
         <option value="$PROJECT_DIR$/run_diff_my_images.sh" />
         <option value="$PROJECT_DIR$/dpxdt/tools/url_pair_diff.py" />
         <option value="$PROJECT_DIR$/tests/testdata/tests_case.json" />
-        <option value="$PROJECT_DIR$/dpxdt/server/auth.py" />
         <option value="$PROJECT_DIR$/dpxdt/client/process_worker.py" />
         <option value="$PROJECT_DIR$/update_history" />
         <option value="$USER_HOME$/Desktop/test.py" />
         <option value="$PROJECT_DIR$/dpxdt/tools/run_server.py" />
-        <option value="$PROJECT_DIR$/dpxdt/tools/put_to_dpxdt.py" />
         <option value="$PROJECT_DIR$/tests/put_to_dpxdt.py" />
         <option value="$PROJECT_DIR$/dpxdt/tools/__init__.py" />
         <option value="$PROJECT_DIR$/dpxdt/server/static/speedo/tests_case.json" />
@@ -385,11 +397,16 @@
         <option value="$PROJECT_DIR$/visualtest_run.py" />
         <option value="$PROJECT_DIR$/dpxdt/server/api.py" />
         <option value="$PROJECT_DIR$/dpxdt/tools/put_to_dpxdt_forPy2.py" />
-        <option value="$PROJECT_DIR$/run_diff_my_image.bat" />
-        <option value="$PROJECT_DIR$/start_up.bat" />
         <option value="D:/项目/运维/portalchk/visual/PutimageAndRun.py" />
-        <option value="$PROJECT_DIR$/dpxdt/server/frontend.py" />
         <option value="$PROJECT_DIR$/dpxdt/tools/PutimageAndRun.py" />
+        <option value="$PROJECT_DIR$/start_up.bat" />
+        <option value="$PROJECT_DIR$/run_diff_my_image.bat" />
+        <option value="$PROJECT_DIR$/dpxdt/server/auth.py" />
+        <option value="$PROJECT_DIR$/dpxdt/server/work_queue_handlers.py" />
+        <option value="$PROJECT_DIR$/dpxdt/tools/put_to_dpxdt.py" />
+        <option value="$PROJECT_DIR$/dpxdt/client/fetch_worker.py" />
+        <option value="D:/Python2.7/Lib/site-packages/flask/app.py" />
+        <option value="$PROJECT_DIR$/dpxdt/server/frontend.py" />
       </list>
     </option>
   </component>
@@ -400,7 +417,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="850" />
+    <option name="x" value="1060" />
+    <option name="y" value="9" />
     <option name="width" value="1075" />
     <option name="height" value="1040" />
   </component>
@@ -409,7 +427,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -434,44 +451,11 @@
               <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="dpxdt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
-              <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dpxdt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
-              <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dpxdt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
-              <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="speedo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dpxdt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
-              <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dpxdt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
-              <item name="dpxdt.egg-info" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -486,19 +470,19 @@
     <property name="settings.editor.selected.configurable" value="SQL Dialects" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\casaba\autotest\dpxdt\mikuu_dpxdt\dpxdt\dpxdt\server\static\CK" />
+      <recent name="D:\casaba\autotest\dpxdt\mikuu_dpxdt\dpxdt\dpxdt\server\static\img" />
+      <recent name="D:\casaba\autotest\dpxdt\mikuu_dpxdt\dpxdt\dpxdt\server\static" />
+      <recent name="D:\casaba\autotest\dpxdt\mikuu_dpxdt\dpxdt\dpxdt\tools" />
+      <recent name="D:\casaba\autotest\dpxdt\mikuu_dpxdt\dpxdt\dpxdt\server\static\speedo" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\casaba\autotest\dpxdt\mikuu_dpxdt\dpxdt\dpxdt\server\static\speedo" />
       <recent name="D:\casaba\autotest\dpxdt\mikuu_dpxdt\dpxdt\dpxdt\tools" />
       <recent name="D:\casaba\autotest\dpxdt\mikuu_dpxdt\dpxdt\dpxdt\tools\local_pdiff_demo" />
       <recent name="D:\casaba\autotest\dpxdt\mikuu_dpxdt\dpxdt\dpxdt\server\static\CK" />
       <recent name="D:\casaba\autotest\dpxdt\mikuu_dpxdt\dpxdt\dpxdt.egg-info" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\casaba\autotest\dpxdt\mikuu_dpxdt\dpxdt\dpxdt\server\static\img" />
-      <recent name="D:\casaba\autotest\dpxdt\mikuu_dpxdt\dpxdt\dpxdt\server\static" />
-      <recent name="D:\casaba\autotest\dpxdt\mikuu_dpxdt\dpxdt\dpxdt\tools" />
-      <recent name="D:\casaba\autotest\dpxdt\mikuu_dpxdt\dpxdt\dpxdt\server\static\speedo" />
-      <recent name="D:\casaba\autotest\dpxdt\mikuu_dpxdt\dpxdt\dpxdt\server\static\CK" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -513,7 +497,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.PutimageAndRun">
+  <component name="RunManager" selected="Python.put_to_dpxdt (1)">
     <configuration name="PutimageAndRun" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="dpxdt" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -558,6 +542,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="frontend" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="dpxdt" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dpxdt/server" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dpxdt/server/frontend.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="operations" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="dpxdt" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -580,29 +586,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="put_to_dpxdt" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="dpxdt" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\casaba\autotest\dpxdt\mikuu_dpxdt\dpxdt\dpxdt\tools\put_to_dpxdt_forPy2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="run_server" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="put_to_dpxdt (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="dpxdt" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -615,7 +599,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dpxdt/tools/run_server.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dpxdt/tools/put_to_dpxdt.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -625,19 +609,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.run_server" />
-      <item itemvalue="Python.put_to_dpxdt" />
       <item itemvalue="Python.__init__" />
       <item itemvalue="Python.operations" />
       <item itemvalue="Python.PutimageAndRun" />
+      <item itemvalue="Python.frontend" />
+      <item itemvalue="Python.put_to_dpxdt (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.put_to_dpxdt (1)" />
+        <item itemvalue="Python.frontend" />
         <item itemvalue="Python.PutimageAndRun" />
         <item itemvalue="Python.operations" />
         <item itemvalue="Python.__init__" />
-        <item itemvalue="Python.put_to_dpxdt" />
-        <item itemvalue="Python.run_server" />
       </list>
     </recent_temporary>
   </component>
@@ -702,9 +686,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20895523" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21108742" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -718,7 +701,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010661" side_tool="true" weight="0.18675353" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4989339" visible="true" weight="0.36590663" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4989339" visible="true" weight="0.3083605" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32899022" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -739,83 +722,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="add put_to_dpxdt.py" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/auth.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="575" column="21" lean-forward="true" selection-start-line="575" selection-start-column="21" selection-end-line="575" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="200" column="4" selection-start-line="200" selection-start-column="4" selection-end-line="200" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/templates/view_run.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="149" column="35" lean-forward="true" selection-start-line="149" selection-start-column="35" selection-end-line="149" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/templates/view_artifact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/update_history">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://80d0b1a9-7de1-4b0d-8dd2-186f0a2e327a/schema/main/table/artifact" />
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/tests_case.json" />
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/CK/testlog.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="103" column="30" selection-start-line="103" selection-start-column="30" selection-end-line="103" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python2.7/Lib/os.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="736" lean-forward="true" selection-start-line="736" selection-end-line="736" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/1181055761/nt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt_run.bat" />
-    <entry file="file://$PROJECT_DIR$/visualtest_run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://80d0b1a9-7de1-4b0d-8dd2-186f0a2e327a/schema/main/table/build" />
     <entry file="das://80d0b1a9-7de1-4b0d-8dd2-186f0a2e327a/schema/main/table/build_ownership" />
     <entry file="das://80d0b1a9-7de1-4b0d-8dd2-186f0a2e327a/schema/main/table/work_queue" />
     <entry file="das://80d0b1a9-7de1-4b0d-8dd2-186f0a2e327a/schema/main/table/run" />
     <entry file="das://80d0b1a9-7de1-4b0d-8dd2-186f0a2e327a/schema/main/table/release" />
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/templates/view_build.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1400">
-          <caret line="56" column="86" selection-start-line="56" selection-start-column="86" selection-end-line="56" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dpxdt/server/templates/fragment_runs_complete.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -830,22 +740,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/work_queue_handlers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dpxdt/client/capture_worker.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1250">
           <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/client/fetch_worker.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/dpxdt/client/capture.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -857,26 +757,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/operations.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4550">
-          <caret line="196" column="48" selection-start-line="196" selection-start-column="48" selection-end-line="196" selection-end-column="48" />
-          <folding>
-            <element signature="e#669#685#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/tools/put_to_dpxdt_forPy2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="875">
-          <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
-          <folding>
-            <element signature="e#38#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/tools/put_to_dpxdt_forPy2.py" />
     <entry file="file://$PROJECT_DIR$/dpxdt/tools/local_pdiff.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -884,16 +765,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/start_up.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="225" selection-start-column="225" selection-end-column="225" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/test.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/test.png" />
     <entry file="file://D:/项目/运维/portalchk/visual/PutimageAndRun.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -901,36 +773,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/PutimageAndRun.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-217">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run_diff_my_image.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" selection-end-column="223" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/G.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/[.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/'GitHub-Mark-32px', 'logo_big'.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/tools/put_to_dpxdt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="55" column="63" selection-start-line="55" selection-start-column="63" selection-end-line="55" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/PutimageAndRun.py" />
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/G.png" />
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/[.png" />
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/'GitHub-Mark-32px', 'logo_big'.png" />
     <entry file="file://$PROJECT_DIR$/dpxdt/server/static/img/logo_big.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -941,54 +787,173 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/ logo_big.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/GitHub-Mark-32px.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/logo_big.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/img/menu_lists (1).png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/img/orderlist_byEmail.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/work_queue.py">
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/ logo_big.png" />
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/GitHub-Mark-32px.png" />
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/logo_big.png" />
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/img/menu_lists (1).png" />
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/img/orderlist_byEmail.png" />
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/orderlist_byEmail.png" />
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/home_footer.png" />
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/cart_page.png" />
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/cart_page(1).png" />
+    <entry file="file://$PROJECT_DIR$/dpxdt_run.bat" />
+    <entry file="file://$PROJECT_DIR$/start_up.bat">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="173" column="63" selection-start-line="173" selection-start-column="56" selection-end-line="173" selection-end-column="63" />
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/orderlist_byEmail.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/home_footer.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/cart_page.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/speedo/cart_page(1).png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/frontend.py">
+    <entry file="file://$PROJECT_DIR$/run_diff_my_image.bat">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="149" column="54" selection-start-line="149" selection-start-column="54" selection-end-line="149" selection-end-column="54" />
+        <state>
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="410" lean-forward="true" selection-start-line="410" selection-end-line="410" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python2.7/Lib/sched.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="65" column="28" lean-forward="true" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/operations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
           <folding>
-            <element signature="e#659#672#0" expanded="true" />
+            <element signature="e#669#685#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/templates/view_build.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="56" column="81" selection-start-line="56" selection-start-column="81" selection-end-line="56" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-750" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/tools/put_to_dpxdt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/test_run_status.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/auth.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-544">
+          <caret line="235" column="4" selection-start-line="235" selection-start-column="4" selection-end-line="235" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/work_queue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="217" lean-forward="true" selection-start-line="217" selection-end-line="217" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/client/fetch_worker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="65" column="34" lean-forward="true" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/work_queue_handlers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="122" column="38" lean-forward="true" selection-start-line="122" selection-start-column="38" selection-end-line="122" selection-end-column="38" />
+          <folding>
+            <element signature="e#632#646#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dpxdt/tools/PutimageAndRun.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="57" column="8" lean-forward="true" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
+        <state relative-caret-position="359">
+          <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python2.7/Lib/multiprocessing/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://D:/Python2.7/Lib/site-packages/werkzeug/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="337" column="4" selection-start-line="337" selection-start-column="4" selection-end-line="337" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python2.7/Lib/site-packages/flask/wrappers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="71" column="8" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python2.7/Lib/site-packages/werkzeug/routing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1720">
+          <caret line="1646" column="56" selection-start-line="1646" selection-start-column="56" selection-end-line="1646" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python2.7/Lib/site-packages/flask/_compat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python2.7/Lib/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="1641" column="16" selection-start-line="1641" selection-start-column="16" selection-end-line="1641" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python2.7/Lib/site-packages/flask/helpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="250" column="39" selection-start-line="250" selection-start-column="39" selection-end-line="250" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/frontend.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="189" column="27" lean-forward="true" selection-start-line="189" selection-start-column="27" selection-end-line="189" selection-end-column="27" />
+          <folding>
+            <element signature="e#659#672#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

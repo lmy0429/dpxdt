@@ -18,10 +18,11 @@
 import base64
 import multiprocessing
 import datetime
+import sched, time
 import hashlib
 import logging
 import os
-import stat, shutil
+import stat, shutil, requests
 # Local libraries
 import flask
 from flask import Flask, abort, g, redirect, render_template, request, url_for, jsonify
@@ -162,7 +163,30 @@ def run_bat():
     os.system(os.path.dirname(os.path.dirname(__file__)) + "_run.bat")
 
 
-@app.route('/build')
+schedule = sched.scheduler(time.time, time.sleep)
+
+
+def get_run_status(run_status):
+    with open(os.path.dirname(os.path.dirname(__file__)) + '\\test_run_status.txt', 'w')as f:
+        f.write(run_status)
+
+
+@app.route('/testresult', methods=['GET'])
+def get_test_result():
+    site = request.args['site']
+    id = {"speedo": 1, "CK": 2, "tommy": 3}
+    build_id = id[site]
+    with open(os.path.dirname(os.path.dirname(__file__)) + '\\test_run_status.txt', 'r')as f:
+        run_status = f.read()
+        logging.info(run_status)
+        if run_status == 'finished':
+            return redirect(url_for('view_build', id=build_id, _method='POST'))
+        else:
+            schedule.enter(10, 0, get_run_status, run_status)
+            return int(time.time())
+
+
+@app.route('/build', methods=['POST', 'GET'])
 @auth.build_access_required
 def view_build():
     """Page for viewing all releases in a build."""
@@ -207,19 +231,24 @@ def view_build():
         for key in ops.get_stats_keys(status):
             stats_dict[key] += count
 
-    stats_dict = run_stats_dict[candidate.id]
     runs_failed = stats_dict['runs_failed']
     logging.info(runs_failed)
-    return render_template(
-        'view_build.html',
-        build=build,
-        release_name_list=release_name_list,
-        release_dict=release_dict,
-        run_stats_dict=run_stats_dict,
-        has_next_page=has_next_page,
-        current_offset=offset,
-        next_offset=offset + page_size,
-        last_offset=max(0, offset - page_size))
+    if request.method == 'POST':
+        if runs_failed > 0:
+            return 'Test Failed : {0} have {1} different'.format(release_name_list[0], runs_failed)
+        else:
+            return 'Test Success : {}'.format(release_name_list[0])
+    else:
+        return render_template(
+            'view_build.html',
+            build=build,
+            release_name_list=release_name_list,
+            release_dict=release_dict,
+            run_stats_dict=run_stats_dict,
+            has_next_page=has_next_page,
+            current_offset=offset,
+            next_offset=offset + page_size,
+            last_offset=max(0, offset - page_size))
 
 
 @app.route('/release', methods=['GET', 'POST'])
