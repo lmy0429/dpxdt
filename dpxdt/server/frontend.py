@@ -163,9 +163,9 @@ def run_bat():
     os.system(os.path.dirname(os.path.dirname(__file__)) + "_run.bat")
 
 
-@app.route('/testresult', methods=['POST'])
+@app.route('/testresult', methods=['GET'])
 def get_test_result():
-    site = request.form['site']
+    site = request.args['site']
     build_id = {"speedo": 1, "CK": 2, "tommy": 3}
     id = build_id[site]
     try:
