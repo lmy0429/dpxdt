@@ -18,7 +18,7 @@
 import logging
 
 # Local libraries
-import flask
+import flask, os
 from flask import Flask, redirect, render_template, request, url_for
 from sqlalchemy import func
 
@@ -29,7 +29,6 @@ from dpxdt.server import auth
 from dpxdt.server import forms
 from dpxdt.server import utils
 from dpxdt.server import work_queue
-from dpxdt.server.frontend import get_run_status
 
 
 @app.route('/api/work_queue/<string:queue_name>/add', methods=['POST'])
@@ -117,7 +116,8 @@ def handle_finish(queue_name):
         return utils.jsonify_error(e)
 
     db.session.commit()
-    get_run_status('finished')
+    with open(os.path.dirname(os.path.dirname(__file__)) + '\\test_run_status.txt', 'w')as f:
+        f.write("finished")
     logging.debug('Task finished: queue=%r, task_id=%r, owner=%r, error=%r',
                   queue_name, task_id, owner, error)
     return flask.jsonify(success=True)

@@ -7,6 +7,7 @@ import json
 import datetime
 import argparse
 import sys
+from time import sleep
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -54,9 +55,22 @@ print "Response from DPXDT :"
 print result
 
 # run dpxdt test
-url = "http://vt.dev.casaba.tech/runtest"
+url_run = "http://vt.dev.casaba.tech/runtest"
 data = {
     "site": args["site"]
 }
-response = requests.post(url, data)
+response = requests.post(url_run, data)
 print response.content
+
+
+# get test result
+def wait_time():
+    pic_num = len(filename_list)
+    wait_time = pic_num * 10
+    sleep(wait_time)
+
+
+url_result = "http://vt.dev.casaba.tech/testresult"
+wait_time()
+result_rs = requests.post(url_result, data)
+print result_rs.content

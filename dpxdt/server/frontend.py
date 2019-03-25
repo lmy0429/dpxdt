@@ -16,7 +16,7 @@
 """Frontend for the API server."""
 
 import base64
-import multiprocessing
+import multiprocessing, thread
 import datetime
 import sched, time
 import hashlib
@@ -29,7 +29,7 @@ from flask import Flask, abort, g, redirect, render_template, request, url_for, 
 from flask.ext.login import (
     current_user, fresh_login_required, login_fresh, login_required)
 from flask.ext.wtf import Form
-
+from time import sleep
 # Local modules
 from . import app
 from . import db
@@ -163,30 +163,59 @@ def run_bat():
     os.system(os.path.dirname(os.path.dirname(__file__)) + "_run.bat")
 
 
-schedule = sched.scheduler(time.time, time.sleep)
-
-
-def get_run_status(run_status):
-    with open(os.path.dirname(os.path.dirname(__file__)) + '\\test_run_status.txt', 'w')as f:
-        f.write(run_status)
-
-
-@app.route('/testresult', methods=['GET'])
+@app.route('/testresult', methods=['POST'])
 def get_test_result():
-    site = request.args['site']
-    id = {"speedo": 1, "CK": 2, "tommy": 3}
-    build_id = id[site]
-    with open(os.path.dirname(os.path.dirname(__file__)) + '\\test_run_status.txt', 'r')as f:
-        run_status = f.read()
-        logging.info(run_status)
-        if run_status == 'finished':
-            return redirect(url_for('view_build', id=build_id, _method='POST'))
-        else:
-            schedule.enter(10, 0, get_run_status, run_status)
-            return int(time.time())
+    site = request.form['site']
+    build_id = {"speedo": 1, "CK": 2, "tommy": 3}
+    id = build_id[site]
+    try:
+        with open(os.path.dirname(os.path.dirname(__file__)) + '\\test_run_status.txt', 'r')as f:
+            excute_result = f.read()
+        os.remove(os.path.dirname(os.path.dirname(__file__)) + '\\test_run_status.txt')
+        if excute_result == "finished":
+            pass
+    except:
+        return "excute don't finished"
+    page_size = 10
+    offset = request.args.get('offset', 0, type=int)
+
+    ops = operations.BuildOps(id)
+    has_next_page, candidate_list, stats_counts = ops.get_candidates(
+        page_size, offset)
+
+    # Collate by release name, order releases by latest creation. Init stats.
+    release_dict = {}
+    created_dict = {}
+    for candidate in candidate_list:
+        release_list = release_dict.setdefault(candidate.name, [])
+        release_list.append(candidate)
+        max_created = created_dict.get(candidate.name, candidate.created)
+        created_dict[candidate.name] = max(candidate.created, max_created)
+
+    # Sort all releases by created time descending
+    release_age_list = [
+        (value, key) for key, value in created_dict.iteritems()]
+    release_age_list.sort(reverse=True)
+    release_name_list = [key for _, key in release_age_list]
+
+    # Count totals for each run state within that release.
+    candidate_id_list = []
+    stats_counts_index = []
+    for candidate_id, status, count in stats_counts:
+        candidate_id_list.append(candidate_id)
+    count_candidate_id = candidate_id_list.count(max(candidate_id_list))
+    for i in range(count_candidate_id):
+        stats_counts_index.append(candidate_id_list.index(max(candidate_id_list)))
+        candidate_id_list.remove(max(candidate_id_list))
+    for count_status in range(len(stats_counts_index)):
+        candidate_id, status, count = stats_counts[stats_counts_index[count_status]]
+        logging.info(stats_counts_index)
+        if status == "diff_found":
+            return 'Test Failed : {0} have {1} different'.format(release_name_list[0], count)
+    return 'Test Success : {0} have {1} is {2}'.format(release_name_list[0], count, status)
 
 
-@app.route('/build', methods=['POST', 'GET'])
+@app.route('/build', methods=['GET'])
 @auth.build_access_required
 def view_build():
     """Page for viewing all releases in a build."""
@@ -230,25 +259,16 @@ def view_build():
         stats_dict = run_stats_dict[candidate_id]
         for key in ops.get_stats_keys(status):
             stats_dict[key] += count
-
-    runs_failed = stats_dict['runs_failed']
-    logging.info(runs_failed)
-    if request.method == 'POST':
-        if runs_failed > 0:
-            return 'Test Failed : {0} have {1} different'.format(release_name_list[0], runs_failed)
-        else:
-            return 'Test Success : {}'.format(release_name_list[0])
-    else:
-        return render_template(
-            'view_build.html',
-            build=build,
-            release_name_list=release_name_list,
-            release_dict=release_dict,
-            run_stats_dict=run_stats_dict,
-            has_next_page=has_next_page,
-            current_offset=offset,
-            next_offset=offset + page_size,
-            last_offset=max(0, offset - page_size))
+    return render_template(
+        'view_build.html',
+        build=build,
+        release_name_list=release_name_list,
+        release_dict=release_dict,
+        run_stats_dict=run_stats_dict,
+        has_next_page=has_next_page,
+        current_offset=offset,
+        next_offset=offset + page_size,
+        last_offset=max(0, offset - page_size))
 
 
 @app.route('/release', methods=['GET', 'POST'])
