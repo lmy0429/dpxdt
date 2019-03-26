@@ -15,7 +15,7 @@ sys.setdefaultencoding('utf-8')
 
 # put images to dpxdt
 def put_to_dpxdt(site, filename_list, base64_data_list):
-    url = "http://vt.dev.casaba.tech/savefile"
+    url = "http://127.0.0.1/savefile"
     data = {
         "site": "{}".format(site),
         "filename_list": "{}".format(filename_list),
@@ -55,7 +55,7 @@ print "Response from DPXDT :"
 print result
 
 # run dpxdt test
-url_run = "http://vt.dev.casaba.tech/runtest"
+url_run = "http://127.0.0.1/runtest"
 data = {
     "site": args["site"]
 }
@@ -70,7 +70,7 @@ def wait_time():
     sleep(wait_time)
 
 
-url_result = "http://vt.dev.casaba.tech/testresult"
+url_result = "http://127.0.0.1/testresult"
 wait_time()
 result_rs = requests.post(url_result, data)
 print result_rs.content
