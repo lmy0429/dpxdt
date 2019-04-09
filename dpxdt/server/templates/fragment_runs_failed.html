@@ -23,7 +23,7 @@
 {% endif %}
 
 {% if runs_failed == 1 %}
-    1 failure
+    <span style="background: brown;border-radius: 10px 10px;padding: 8px 8px 8px 8px;font-size: 17px;color:white">1 failure</span>
 {% elif runs_failed > 0 %}
     <span style="background: brown;border-radius: 10px 10px;padding: 8px 8px 8px 8px;font-size: 17px;color:white">{{ runs_failed }} failures</span>
 {% elif runs_total > 0 and runs_successful == runs_total %}
