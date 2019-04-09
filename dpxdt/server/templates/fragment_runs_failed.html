@@ -25,9 +25,9 @@
 {% if runs_failed == 1 %}
     1 failure
 {% elif runs_failed > 0 %}
-    {{ runs_failed }} failures
+    <span style="background: brown;border-radius: 10px 10px;padding: 8px 8px 8px 8px;font-size: 17px;color:white">{{ runs_failed }} failures</span>
 {% elif runs_total > 0 and runs_successful == runs_total %}
-    All passing
+      <span style="background: green;border-radius: 10px 10px;padding: 8px 8px 8px 8px;font-size: 17px;color:white">All passing</span>
 {% elif runs_pending == 1 %}
     1 pending
 {% elif runs_pending > 0 %}

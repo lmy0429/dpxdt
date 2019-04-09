@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49501c36-a885-466a-8f00-b5ba4fcd11a6" name="Default Changelist" comment="" />
+    <list default="true" id="49501c36-a885-466a-8f00-b5ba4fcd11a6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dpxdt/server/static/css/bootstrap-responsive.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dpxdt/server/static/css/bootstrap-responsive.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dpxdt/server/static/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dpxdt/server/static/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dpxdt/server/templates/fragment_runs_failed.html" beforeDir="false" afterPath="$PROJECT_DIR$/dpxdt/server/templates/fragment_runs_failed.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dpxdt/server/templates/view_build.html" beforeDir="false" afterPath="$PROJECT_DIR$/dpxdt/server/templates/view_build.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start_up.bat" beforeDir="false" afterPath="$PROJECT_DIR$/start_up.bat" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,43 +127,48 @@
     <session id="706130212">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="25" />
+          <entry key="project.closed" value="28" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="7" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="3" />
           <entry key="project.open.time.13" value="3" />
           <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.16" value="2" />
+          <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="7" />
-          <entry key="project.opened" value="27" />
+          <entry key="project.opened" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bash" value="35" />
-          <entry key="Bat" value="41" />
+          <entry key="Bat" value="42" />
+          <entry key="CSS" value="71" />
           <entry key="Dockerfile" value="7" />
+          <entry key="HTML" value="160" />
           <entry key="PLAIN_TEXT" value="500" />
-          <entry key="Python" value="9332" />
+          <entry key="Python" value="9341" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Bash" value="20" />
           <entry key="Bat" value="34" />
-          <entry key="CSS" value="1" />
+          <entry key="CSS" value="4" />
           <entry key="Database Element" value="23" />
           <entry key="Dockerfile" value="4" />
-          <entry key="HTML" value="11" />
+          <entry key="HTML" value="14" />
           <entry key="Image" value="95" />
           <entry key="Ini" value="4" />
           <entry key="JSON" value="12" />
           <entry key="JavaScript" value="2" />
-          <entry key="PLAIN_TEXT" value="19" />
-          <entry key="Python" value="221" />
+          <entry key="PLAIN_TEXT" value="20" />
+          <entry key="Python" value="222" />
           <entry key="PythonStub" value="2" />
           <entry key="YAML" value="5" />
         </counts>
@@ -205,28 +217,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dpxdt/server/frontend.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="214" column="12" selection-start-line="214" selection-start-column="12" selection-end-line="214" selection-end-column="24" />
-              <folding>
-                <element signature="e#659#672#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dpxdt/tools/PutimageAndRun.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="69" column="20" lean-forward="true" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+            <state relative-caret-position="326">
+              <caret line="73" column="11" selection-start-line="73" selection-start-column="11" selection-end-line="73" selection-end-column="11" />
               <folding>
                 <element signature="e#38#51#0" expanded="true" />
               </folding>
@@ -235,31 +230,52 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run_shell.sh">
+        <entry file="file://$PROJECT_DIR$/dpxdt/server/templates/view_release.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="39" />
+            <state relative-caret-position="250">
+              <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dpxdt/tools/diff_my_images.py">
+        <entry file="file://$PROJECT_DIR$/dpxdt/server/templates/view_build.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4325">
-              <caret line="180" column="29" selection-start-line="180" selection-start-column="29" selection-end-line="180" selection-end-column="29" />
+            <state relative-caret-position="382">
+              <caret line="35" column="50" lean-forward="true" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dpxdt/server/operations.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dpxdt/server/templates/fragment_runs_failed.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5200">
-              <caret line="222" column="52" selection-start-line="222" selection-start-column="52" selection-end-line="222" selection-end-column="52" />
+            <state relative-caret-position="350">
+              <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
               <folding>
-                <element signature="e#669#685#0" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#strong#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#1;n#span#0;n#strong#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#span#0;n#strong#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#span#0;n#strong#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dpxdt/server/static/css/bootstrap.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="201" column="1" lean-forward="true" selection-start-line="201" selection-start-column="1" selection-end-line="201" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dpxdt/server/static/css/bootstrap-responsive.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="232" column="14" lean-forward="true" selection-start-line="232" selection-start-column="14" selection-end-line="232" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -276,8 +292,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dpxdt/server/work_queue_handlers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="120" column="16" lean-forward="true" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="16" />
+            <state relative-caret-position="2675">
+              <caret line="120" column="16" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="16" />
               <folding>
                 <element signature="e#632#646#0" expanded="true" />
               </folding>
@@ -298,7 +314,7 @@
         <entry file="file://$PROJECT_DIR$/start_up.bat">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="5" selection-start-column="5" selection-end-column="5" />
+              <caret column="7" selection-start-column="7" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -315,15 +331,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>download</find>
-      <find>_save_artifact</find>
-      <find>values</find>
-      <find>runtest</find>
-      <find>info</find>
       <find>row build-release-section</find>
       <find>new_build.html</find>
       <find>view_build.html</find>
-      <find>runs_failed</find>
       <find>run_stats_dict</find>
       <find>fetch</find>
       <find>compicture</find>
@@ -342,9 +352,15 @@
       <find>function_or_param_name</find>
       <find>row-fluid status-panel status-panel-warning no-min-height</find>
       <find>span5 text-right</find>
-      <find>row</find>
       <find>write</find>
       <find>done</find>
+      <find>span</find>
+      <find>body</find>
+      <find>row</find>
+      <find>runs_failed</find>
+      <find>.offset2</find>
+      <find>row build-candidate-section</find>
+      <find>x-la</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -366,15 +382,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="D:/Python2.7/Lib/site-packages/dpxdt/tools/local_pdiff.py" />
-        <option value="$PROJECT_DIR$/dpxdt/tools/local_pdiff_demo/test.py" />
-        <option value="$PROJECT_DIR$/dpxdt/tools/local_pdiff.py" />
         <option value="$PROJECT_DIR$/dpxdt/server/config.py" />
         <option value="$PROJECT_DIR$/dpxdt/client/pdiff_worker.py" />
         <option value="$PROJECT_DIR$/run_combined.sh" />
         <option value="$PROJECT_DIR$/run_server.sh" />
         <option value="$PROJECT_DIR$/dpxdt/tools/local_pdiff_demo/test.yaml" />
-        <option value="$PROJECT_DIR$/dpxdt/server/templates/view_build.html" />
         <option value="$PROJECT_DIR$/tests/testdata/test_json.py" />
         <option value="F:/test/test_json.py" />
         <option value="$PROJECT_DIR$/tests/testdata/my_tests.json" />
@@ -413,10 +425,14 @@
         <option value="$PROJECT_DIR$/dpxdt/tools/put_to_dpxdt.py" />
         <option value="$PROJECT_DIR$/dpxdt/server/work_queue_handlers.py" />
         <option value="$PROJECT_DIR$/dpxdt/server/wait.py" />
-        <option value="$PROJECT_DIR$/dpxdt/tools/PutimageAndRun.py" />
         <option value="$PROJECT_DIR$/run_diff_my_image.bat" />
         <option value="$PROJECT_DIR$/dpxdt/server/frontend.py" />
+        <option value="$PROJECT_DIR$/dpxdt/tools/PutimageAndRun.py" />
         <option value="$PROJECT_DIR$/start_up.bat" />
+        <option value="$PROJECT_DIR$/dpxdt/server/templates/view_build.html" />
+        <option value="$PROJECT_DIR$/dpxdt/server/static/css/bootstrap-responsive.min.css" />
+        <option value="$PROJECT_DIR$/dpxdt/server/templates/fragment_runs_failed.html" />
+        <option value="$PROJECT_DIR$/dpxdt/server/static/css/bootstrap.min.css" />
       </list>
     </option>
   </component>
@@ -427,10 +443,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="866" />
-    <option name="y" value="4" />
-    <option name="width" value="1075" />
-    <option name="height" value="1040" />
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -473,6 +487,21 @@
               <item name="dpxdt" type="b2602c69:ProjectViewProjectNode" />
               <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
               <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dpxdt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
+              <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dpxdt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
+              <item name="dpxdt" type="462c0819:PsiDirectoryNode" />
               <item name="tools" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -487,10 +516,10 @@
     <property name="SearchEverywhereHistoryKey" value="_inter&#9;null&#9;null&#10;SQL&#9;null&#9;null&#10;SQLALCHEMY_DATABASE_URI&#9;null&#9;null&#10;db&#9;FILE&#9;file://D:/Python2.7/Lib/sqlite3/test/dbapi.py&#10;imagemagick&#9;null&#9;null&#10;compare&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="D:/sqlite" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/pytestclass/锘縫ytestclass" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="SQL Dialects" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -507,6 +536,116 @@
       <recent name="D:\casaba\autotest\dpxdt\mikuu_dpxdt\dpxdt\dpxdt\tools" />
       <recent name="D:\casaba\autotest\dpxdt\mikuu_dpxdt\dpxdt\dpxdt\server\static\speedo" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gitignore</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -709,8 +848,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16311301" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20202559" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -721,10 +861,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32356134" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" weight="0.18892509" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010661" side_tool="true" weight="0.18675353" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4989339" visible="true" weight="0.38219327" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4989339" visible="true" weight="0.3170467" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32899022" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -737,6 +877,32 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -745,48 +911,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="add put_to_dpxdt.py" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/Python2.7/Lib/sched.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="65" column="28" lean-forward="true" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/work_queue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="217" lean-forward="true" selection-start-line="217" selection-end-line="217" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python2.7/Lib/site-packages/flask/wrappers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="71" column="8" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python2.7/Lib/site-packages/flask/_compat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/client/fetch_worker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1325">
-          <caret line="65" column="34" lean-forward="true" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Python2.7/Lib/site-packages/werkzeug/routing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40800">
@@ -885,13 +1009,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/test_run_status.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/test_run_status.txt" />
     <entry file="file://$PROJECT_DIR$/dpxdt/server/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -939,38 +1057,11 @@
         <state relative-caret-position="-225" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/templates/view_build.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="51" column="84" selection-start-line="51" selection-start-column="84" selection-end-line="51" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://80d0b1a9-7de1-4b0d-8dd2-186f0a2e327a/schema/main/table/release" />
     <entry file="das://80d0b1a9-7de1-4b0d-8dd2-186f0a2e327a/schema/main/table/run" />
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/CK/GitHub-Mark-32px.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/CK/logo_big.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/tools/put_to_dpxdt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1025">
-          <caret line="46" selection-start-line="46" selection-end-line="49" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/wait.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="8" selection-start-line="8" selection-end-line="10" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/CK/GitHub-Mark-32px.png" />
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/CK/logo_big.png" />
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/wait.py" />
     <entry file="file://$PROJECT_DIR$/dpxdt/server/api.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12775">
@@ -982,6 +1073,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3450">
           <caret line="141" column="8" selection-start-line="141" selection-start-column="8" selection-end-line="141" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/frontend.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4825">
+          <caret line="218" column="25" selection-start-line="218" selection-start-column="25" selection-end-line="218" selection-end-column="25" />
+          <folding>
+            <element signature="e#659#672#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/tools/put_to_dpxdt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="925">
+          <caret line="42" column="59" selection-start-line="42" selection-start-column="59" selection-end-line="42" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_shell.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -1011,8 +1129,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dpxdt/server/work_queue_handlers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="120" column="16" lean-forward="true" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="16" />
+        <state relative-caret-position="2675">
+          <caret line="120" column="16" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="16" />
           <folding>
             <element signature="e#632#646#0" expanded="true" />
           </folding>
@@ -1028,37 +1146,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dpxdt/tools/PutimageAndRun.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="69" column="20" lean-forward="true" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+        <state relative-caret-position="326">
+          <caret line="73" column="11" selection-start-line="73" selection-start-column="11" selection-end-line="73" selection-end-column="11" />
           <folding>
             <element signature="e#38#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run_shell.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/start_up.bat">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dpxdt/server/frontend.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="214" column="12" selection-start-line="214" selection-start-column="12" selection-end-line="214" selection-end-column="24" />
+        <state relative-caret-position="450">
+          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-525" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/templates/view_release.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/css/bootstrap-responsive.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="232" column="14" lean-forward="true" selection-start-line="232" selection-start-column="14" selection-end-line="232" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/templates/view_build.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="35" column="50" lean-forward="true" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/static/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="201" column="1" lean-forward="true" selection-start-line="201" selection-start-column="1" selection-end-line="201" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dpxdt/server/templates/fragment_runs_failed.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
           <folding>
-            <element signature="e#659#672#0" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#strong#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#1;n#span#0;n#strong#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#0;n#strong#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#span#0;n#strong#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
