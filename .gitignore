@@ -15,3 +15,10 @@ bin
 include
 lib
 pip-selfcheck.json
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out
