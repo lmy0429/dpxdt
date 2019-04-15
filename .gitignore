@@ -16,9 +16,8 @@ include
 lib
 pip-selfcheck.json
 
-### IntelliJ IDEA ###
-.idea
-*.iws
+.vscode
+.idea/
 *.iml
-*.ipr
-out
+out/
+
