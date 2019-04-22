@@ -103,6 +103,7 @@ from dpxdt.server import webhooks
 from dpxdt.server import work_queue
 from dpxdt.server import utils
 
+
 @app.route('/api/create_release', methods=['POST'])
 @auth.build_api_access_required
 @utils.retryable_transaction()
@@ -138,6 +139,14 @@ def create_release():
             db.session.add(last_candidate)
 
     db.session.add(release)
+    releases = models.Release.query.all()
+    if len(releases) > 10:
+        now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        for data in releases:
+            createtime = datetime.datetime.strptime(str(data.created)[:-7], '%Y-%m-%d %H:%M:%S')
+            nowtime = datetime.datetime.strptime(now, '%Y-%m-%d %H:%M:%S')
+            if (nowtime - createtime).days + 1 > 5:
+                db.session.delete(data)
     db.session.commit()
 
     signals.release_updated_via_api.send(app, build=build, release=release)
