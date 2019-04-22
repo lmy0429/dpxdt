@@ -142,14 +142,14 @@ def base64_png(site, filename_list, base64_data_list):
 def run_test():
     if request.method == 'POST':
         site = request.form['site']
-        id = {"speedo": 1, "CK": 2, "tommy": 3}
+        build = models.Build.query.filter_by(name=site).first()
+        id = build.id
         release_server_prefix = 'http://localhost:80/api'
         casefile_path = os.path.abspath(os.path.dirname(__file__) + os.path.sep + ".") + "\\static" + "\\%s\\" % site
-        build_id = id[site]
         cut_url = 'http://example.com/path/to/my/release/tool/for/this/cut'
         run_diff_path = os.path.abspath(os.getcwd()) + "\\dpxdt\\tools\\diff_my_images.py"
         data = "python %s --upload_build_id=%s --release_server_prefix=%s --release_cut_url=%s --casefile_path=%s" % (
-            run_diff_path, build_id, release_server_prefix, cut_url, casefile_path)
+            run_diff_path, id, release_server_prefix, cut_url, casefile_path)
         with open(os.path.dirname(os.path.dirname(__file__)) + "_run.bat", 'w') as f:
             f.write(data)
         process = multiprocessing.Process(target=run_bat)
@@ -166,8 +166,8 @@ def run_bat():
 @app.route('/testresult', methods=['GET'])
 def get_test_result():
     site = request.args['site']
-    build_id = {"speedo": 1, "CK": 2, "tommy": 3}
-    id = build_id[site]
+    build = models.Build.query.filter_by(name=site).first()
+    id = build.id
     try:
         with open(os.path.dirname(os.path.dirname(__file__)) + '\\test_run_status.txt', 'r')as f:
             excute_result = f.read()
