@@ -145,8 +145,12 @@ def create_release():
         for data in releases:
             createtime = datetime.datetime.strptime(str(data.created)[:-7], '%Y-%m-%d %H:%M:%S')
             nowtime = datetime.datetime.strptime(now, '%Y-%m-%d %H:%M:%S')
-            if (nowtime - createtime).days + 1 > 5:
+            if (nowtime - createtime).days + 1 > 5 and data.status != 'good' and data.build_id == build.id:
                 db.session.delete(data)
+                runs = models.Run.query.all()
+                for runs_data in runs:
+                    if runs_data.release_id is None or runs_data.release_id == data.id:
+                        db.session.delete(runs_data)
     db.session.commit()
 
     signals.release_updated_via_api.send(app, build=build, release=release)
