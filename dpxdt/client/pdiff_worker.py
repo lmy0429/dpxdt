@@ -208,7 +208,13 @@ class DoPdiffQueueWorkflow(workers.WorkflowItem):
                     r = DIFF_REGEX.findall(log_data)
                     if len(r) > 0:
                         diff_failed = False
-                        distortion = r[0]
+                        # If the difference is less than 1%, it will be ignored automatically
+                        if float(r[0]) < 0.01:
+                            distortion = None
+                            diff_path = None
+                            diff_failed = False
+                        else:
+                            distortion = r[0]
 
             yield heartbeat('Reporting diff result to server')
             yield release_worker.ReportPdiffWorkflow(
