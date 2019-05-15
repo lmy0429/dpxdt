@@ -478,7 +478,7 @@ def report_run():
                      build.id, release.name, release.number, run.name,
                      run.diff_image, run.diff_log, diff_failed, distortion)
 
-    if run.image and run.diff_image:
+    if run.image and run.distortion:
         run.status = models.Run.DIFF_FOUND
     elif run.image and run.ref_image and not run.diff_log:
         run.status = models.Run.NEEDS_DIFF

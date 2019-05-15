@@ -211,7 +211,7 @@ class DoPdiffQueueWorkflow(workers.WorkflowItem):
                         # If the difference is less than 1%, it will be ignored automatically
                         if float(r[0]) < 0.01:
                             distortion = None
-                            diff_path = None
+                            # diff_path = None
                             diff_failed = False
                         else:
                             distortion = r[0]
